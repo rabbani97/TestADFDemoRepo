@@ -1,0 +1,61 @@
+{
+	"name": "ds_input_file_blob_connect",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BlobConnection",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "2020.csv",
+				"container": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "SalesOrderNumber",
+				"type": "String"
+			},
+			{
+				"name": "SalesOrderLineNumber",
+				"type": "String"
+			},
+			{
+				"name": "OrderDate",
+				"type": "String"
+			},
+			{
+				"name": "CustomerName",
+				"type": "String"
+			},
+			{
+				"name": "EmailAddress",
+				"type": "String"
+			},
+			{
+				"name": "Item",
+				"type": "String"
+			},
+			{
+				"name": "Quantity",
+				"type": "String"
+			},
+			{
+				"name": "UnitPrice",
+				"type": "String"
+			},
+			{
+				"name": "TaxAmount",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
